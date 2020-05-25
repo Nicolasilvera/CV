@@ -45,7 +45,7 @@ function ImgCard(props){
 						subtitulo={"("+edad + " años)"}
 						texto= <p>
 						Soy Analista Programador, egresado el día 29 de Julio de 2019 de la Universidad Nacional de La Pampa. Además,
-						he finalizado las asignaturas de la carrera carrera de Ingeniería en Sistemas, restando realizar 200 horas
+						he finalizado las asignaturas de la carrera de Ingeniería en Sistemas, restando realizar 200 horas
 						en el marco de "Prácticas Profesionales Supervisadas (PPS)" y la tesis, por lo que estimo finalizar la materia en los
 						primeros meses de 2021.<br/>
 						Actualmente me encuentro en la búsqueda de mi primer empleo, con una disponibilidad horaria completa, para así
