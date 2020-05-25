@@ -73,7 +73,7 @@ function HistoryCard(){
 						la Universidad Nacional de La Pampa</i>, comenzando en 2008 y egresando del sexto año en 2013.</p>
 						<p>Durante los 
 						últimos 3 años, además de las materias habituales, realicé la orientación de Ciencias Humanas a contraturno. 
-						Gracias a ésta forma de dictado de clases y el nivel académico del colegio, no sólo me furmé en Ciencias Humanas
+						Gracias a ésta forma de dictado de clases y el nivel académico del colegio, no sólo me formé en Ciencias Humanas
 						sino que en el resto de las asignaturas "comunes" también.</p></div>
 					/>
 					</Col>
