@@ -4,6 +4,9 @@ A inicios de Abril de 2020 comencé a estudiar acerca de React.js dada su popula
 
 Es una aplicación estática, donde se intenta explotar al máximo el concepto de componentes para la implementación de React.js, utilizando Bootstrap y obviamente JS. Además de las tecnologías básicas utilizadas en la web (HTML y CSS).
 
+* Aplicación Responsive
+* Falta aplicar funcionalidad movil a "Snake" (Pensaba solucionarlo, dividiendo la pantalla en botones invisibles que seleccionen la dirección de la víbora, de igual forma que hace el teclado)
+
 
                                                    *_ React.js a futuro _*
 Estoy trabajando en una webpage un poco más robusta y dinámica, para demostrar habilidades en distintas tecnologías utilizando React.js para el FrontEnd, que consume datos de una API Rest implementada en Laravel. Dicho proyecto aún no fue publicado, puesto que está en fases iniciales de desarrollo.
