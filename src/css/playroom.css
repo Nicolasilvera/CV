@@ -1,0 +1,20 @@
+
+.button-launcher{
+	background-color: darkslategray;
+	background-repeat: no-repeat;
+	background-position: center;
+  	background-size: 80vh;
+  	min-height: 40vh;
+  	min-width: 35vw;
+	font-size: 2vw;
+	color: transparent;
+	border-color: dimgray;
+	background-color: darkslategray;
+}
+
+.button-launcher:hover{
+	background-size: 0;
+	background-color: #35939E;
+	border-color: dimgray;
+	color:blue;
+}

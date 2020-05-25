@@ -1,0 +1,53 @@
+.gameArea{
+	height: 400px;
+}
+.canvasSnake{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 600px;
+	height: 300px;
+	background-image: url('../assets/images/bgSnake.jpg');
+	border:solid 10px;
+}
+
+.inputOculto{
+	position:absolute;
+	background-color:transparent; 
+	width:100%; 
+	height:100%;
+	color:transparent;
+	background: transparent;
+    border: none; 
+	left:0; 
+	right:0; 
+	top:0;
+	bottom:0;
+
+}
+
+.inputOculto:focus{
+	outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.gameOver{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 600px;
+	height: 300px;
+	color:red; 
+	background-color: dimgray;
+	font-size: 10vh;
+	opacity: 0.9;
+	animation: gameOver 2s ease-in 0s 1 forwards;
+}
+
+@keyframes gameOver {
+	0%   {background-color:transparent;}
+	100%   {background-color:dimgray;}
+}

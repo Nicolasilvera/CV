@@ -1,0 +1,51 @@
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+/*                                                           Squares                                                   */
+.square {
+  background: darkCyan;
+  border: 1px solid #999;
+  float: left;
+  font-size: 60px;
+  line-height: 34px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+.square:hover {
+  background-color: cornflowerblue
+}
+.squareBold {
+  background: darkcyan;
+  color:red;
+  border: 1px solid #999;
+  float: left;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 34px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+
+/*Estados Finales -- Squares*/
+.winner {
+  background: green;
+  color:white;
+}
+
+.draw {
+  background: grey;
+  color:red;
+}
+/*Fin EstadosFinales*/

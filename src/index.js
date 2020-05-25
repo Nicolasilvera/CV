@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import App from './components/App.js';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+ 		<App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

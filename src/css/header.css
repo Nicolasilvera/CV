@@ -1,0 +1,142 @@
+
+/*Core del NAV*/
+.navbar{  
+  background-color: darkslategray;
+	height: 15vh;
+}
+.divLogos{
+  width: 40vw;
+}
+.logo-giratorio{
+  max-height: 15vh;
+}
+.logo-nombre{
+  max-height: 15vh;
+  max-width: 30vw;
+}
+
+/*Fin del Core*/
+
+/*MENU PC*/
+.divBotones{
+  width: 60vw;
+  height: 15vh;
+}
+.anchorMenu {
+  position: relative;
+  width:100%;
+  height: 15vh;
+	box-shadow:1px 1px 10px 1px dimgray inset; 
+  text-align: center;
+	font-size: 3vh;
+  font-weight: bold;
+  color: black;
+  background-image: linear-gradient(dimgray, darkslategray);
+}
+.anchorMenu:hover{
+	background-image: linear-gradient(darkslategray,dimgray);
+  border:dotted;
+  border-color: black;
+  border-width: 1px;
+  color: white;
+}
+
+/*FIN MENU PC*/
+
+/*Menú Movil*/
+.menuMovilButton{
+  font-size: 3em;
+  border:0px;
+  position: absolute;
+  top:0;
+  right: 0;
+  min-width: 15vh;
+  box-shadow: 0px 0px 10px 0px dimgray inset; 
+  background-color: darkslategray;
+}
+.menuMovilButton:focus{
+  background-color: darkslategray;
+  box-shadow:1px 1px 10px 1px dimgray inset; 
+}
+.modalMenuMovil{
+  position: fixed;
+  top:0%;
+  left:0%;
+  width: 35vh;
+  animation: entradaMenu ease-out 1s 1 forwards;
+  background-color: transparent;
+  overflow: hidden;
+  min-height: 85vh;
+}
+.anchorMenuMovil{
+  min-height: 50vh;
+  padding-top: 22vh;
+  font-size: 3vh; 
+  overflow: hidden;
+  text-align: center;
+  box-shadow:5px 5px 10px 5px dimgray inset;
+}
+/*Cierra Menu Movil*/
+
+
+/*                                                      ANIMACIONES                                                         */
+/*Clases*/
+@media (prefers-reduced-motion: no-preference) {
+  .running{
+    animation: play-logo-spin 1s ease-in-out alternate;
+    animation-iteration-count: 2;
+    animation-play-state: running;
+  }
+
+  .paused{
+  	animation: pause-logo-spin;
+  	animation-play-state: paused;
+  }
+}
+
+/*animation-name*/
+@keyframes play-logo-spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes pause-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes entradaMenu {
+  0%   {background-color: dimgray; left:-30vh; top:0;}
+  50%   {background-color: dimgray; left:-30vh; top:0;}
+  100% {background-color:darkslategray; left:0vh; top:0;}
+}
+
+
+/*                                                 Discriminación de pantalla                                                     */
+/*Pantallas chicas*/
+@media screen and (max-device-width : 480px) {
+  .logo-nombre{
+    display: none;
+  } 
+  .anchorMenu{
+    display: none;
+  }
+}
+
+/*Pantallas grandes*/
+@media screen and (min-device-width : 480px) {
+ .menuMovilButton{
+    display: none;
+  }
+.logo-giratorio{
+  max-width: 10vw;
+}
+}
