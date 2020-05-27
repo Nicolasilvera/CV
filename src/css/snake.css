@@ -1,14 +1,11 @@
-.gameArea{
-	height: 400px;
-}
 .canvasSnake{
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 600px;
-	height: 300px;
+	width: 100%;
 	background-image: url('../assets/images/bgSnake.jpg');
 	border:solid 10px;
+}
+.canvasGameOver{
+	filter: grayscale(70%);
+	animation: gameOver 1s ease-in 0s 1 alternate;
 }
 
 .inputOculto{
@@ -34,20 +31,8 @@
     -webkit-box-shadow: none;
 }
 
-.gameOver{
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 600px;
-	height: 300px;
-	color:red; 
-	background-color: dimgray;
-	font-size: 10vh;
-	opacity: 0.9;
-	animation: gameOver 2s ease-in 0s 1 forwards;
-}
 
 @keyframes gameOver {
-	0%   {background-color:transparent;}
-	100%   {background-color:dimgray;}
+	0%   {filter: grayscale(0%);}
+	100%   { filter: grayscale(70%);}
 }

@@ -60,13 +60,12 @@
 }
 .modalMenuMovil{
   position: fixed;
-  top:0%;
-  left:0%;
-  width: 35vh;
+  top:0;
   animation: entradaMenu ease-out 1s 1 forwards;
   background-color: transparent;
   overflow: hidden;
   min-height: 85vh;
+  width:35vh;
 }
 .anchorMenuMovil{
   min-height: 50vh;
@@ -114,9 +113,8 @@
 }
 
 @keyframes entradaMenu {
-  0%   {background-color: dimgray; left:-30vh; top:0;}
-  50%   {background-color: dimgray; left:-30vh; top:0;}
-  100% {background-color:darkslategray; left:0vh; top:0;}
+  0%   {background-color: dimgray; left:-30vh;}
+  100% {background-color:darkslategray; left:0vh;}
 }
 
 

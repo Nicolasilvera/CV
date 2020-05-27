@@ -93,7 +93,7 @@ class SnakeGame extends React.Component{
       this.setState({lastDirection:this.state.direction});
     }
   }
-  renderGame(){
+  renderGame(props){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
@@ -124,6 +124,16 @@ class SnakeGame extends React.Component{
     ctx.arc(this.state.mouse[0]+5, this.state.mouse[1]+5 , 3, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+
+    if (ctx && !this.state.keepAlive) {
+		var centerX = c.width/2;
+		var centerY = c.height/2;
+		ctx.textAlign="center";
+		
+		ctx.font="italic small-caps bold 5vh arial";
+		ctx.fillStyle = "red";
+		ctx.fillText("GAME OVER",centerX,centerY);
+	}
   }
   tick() {
     const level = Math.floor(this.state.mouseCount/15)+1;
@@ -132,7 +142,7 @@ class SnakeGame extends React.Component{
       timeIntervals: this.state.timeIntervals+level,
     });
     
-    if( this.state.timeIntervals > 60 ){
+    if( this.state.timeIntervals > 45 ){
       this.moveSnake();
       this.setState({timeIntervals:0});
     }
@@ -185,27 +195,28 @@ class SnakeGame extends React.Component{
   }
 
   render(props){
-    const buttonRestart= <Button variant="danger" style={{height:'10vh', width:'25vw'}} onClick={()=>this.restart()}>Restart</Button>;
+    const buttonRestart= <Button variant="warning" style={{float:'right', margin:'5px'}} onClick={()=>this.restart()}>Restart</Button>;
     const h1InfoStyle={fontSize:'2vw', textAlign:'left'};
+    const classCanvas= (this.state.keepAlive ? "" :" canvasGameOver");
     return(
        <Container className="contenedor">
         <Row>
           <Col sm={12} md={12}>
-            <Button variant="danger" style={{float:'right'}} onClick={()=>this.props.onClose()}>x</Button>
+            <Button variant="danger" style={{float:'right', margin:'5px'}} onClick={()=>this.props.onClose()}>x</Button>
+            {buttonRestart}
           </Col>
         </Row>
         <Row>
-          <Col sm={8} md={8} className="gameArea">
-              <canvas id="myCanvas" className="canvasSnake">
+          <Col sm={8} md={8}>
+              <canvas id="myCanvas" className={"canvasSnake"+classCanvas}>
                 Su navegador no soporta canvas =(  
               </canvas>
               <input id="controllInput" className="inputOculto" onKeyDown={(e)=>this.handleKey(e.key)} spellcheck="false" autofocus="true" readonly="true"/>
-              {(!this.state.keepAlive) ?<div className="gameOver">Game Over<br/>SCORE: {this.state.mouseCount}<br/>{buttonRestart}</div> : '' }
-            
           </Col>
           <Col sm={4} md={4}>
             <h1 style={h1InfoStyle}>NIVEL: {Math.floor(this.state.mouseCount/15)+1}</h1>
             <h1 style={h1InfoStyle}>SCORE: {this.state.mouseCount}</h1>
+            <h1>{this.state.width}</h1>
           </Col>
         </Row>
      </Container>

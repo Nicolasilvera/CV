@@ -15,9 +15,9 @@ import imgSnake from '../../assets/images/snake.png';
 
 function CardLauncher(props){
 	return(
-		<Col sm={12} md={{'span':5,'offset':1}} >
+		<Col sm={12} md={6} >
 			<Button className="button-launcher"
-					style={{backgroundImage: "url(" + props.src + ")"}}
+					style={{backgroundImage: "url(" + props.src + ")", margin:"1vh"}}
 					value={props.name} 
 					onClick={()=>props.onClick(props.name)}>
 				<b><i>{props.name}</i></b>
@@ -28,15 +28,15 @@ function CardLauncher(props){
 
 function Launcher(props){
 	return(
-			<>
+			<div>
 				<br/>
-				<Container >	
-					<Row>
+				<Container>	
+					<Row  style={{width:'100%'}}>
 						<CardLauncher src={imgTictactoe} onClick={props.onClick} name="TIC-TAC-TOE"/>
 						<CardLauncher src={imgSnake} onClick={props.onClick} name="SNAKE"/>
 					</Row>
 				</Container>
-			</>
+			</div>
 		);
 }
 class Playroom extends React.Component{
